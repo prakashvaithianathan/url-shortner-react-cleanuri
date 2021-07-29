@@ -1,0 +1,171 @@
+body {
+  background: rgba(28, 28, 83, 0.959);
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.inputBox {
+  padding: 5px 20px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  position:relative;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.4rem;
+  width: 20rem;
+  height: 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.btn {
+  color: white !important;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px 0.5px rgb(255, 255, 255) !important;
+  font-size: 1.2rem !important;
+  background: rgb(213, 3, 255) !important;
+}
+
+.search {
+  color: rgb(132, 0, 255) !important;
+  font-size: 40px !important;
+  border-left: 1px solid grey;
+  padding-left: 10px;
+  cursor: pointer;
+  background:white !important;
+  z-index: 2 !important;
+  /* position:absolute !important;
+    right: 10px !important; */
+}
+
+#input {
+  display: none;
+  color: rgb(255, 255, 255);
+}
+
+.result {
+  background: black;
+  padding: 20px;
+  box-shadow: rgb(255, 255, 255) 0px 2px 4px, rgba(255, 255, 255, 0.075) 0px 7px 13px -3px,
+  rgba(255, 255, 255, 0.863) 0px -3px 0px inset;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+  width: auto;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.result:hover{
+  transform: scale(1.2);
+}
+.result > h2 {
+  color: white;
+  padding-right: 20px;
+}
+
+.res{
+  background:white;
+ z-index: 2px;
+ position: absolute;
+}
+
+.file{
+  padding-left: 20px !important;
+  border-left: 1px solid grey !important;
+  color:pink !important;
+}
+
+.success{
+  color:white;
+}
+
+@media only screen and (max-width:500px &&min-width:300px){
+  .inputBox{
+    width: 80%;
+    position:relative;
+  }
+  input{
+    width: 70%;
+  }
+  .result{
+    width: 80%;
+  }
+  .result >h2{
+    font-size: 1.1rem;
+  }
+  .search{
+    position:absolute !important;
+    right: 10px !important;
+  }
+}
+
+@media only screen and (max-width:350px){
+  .inputBox{
+    width: 70%;
+    position:relative;
+  }
+  input{
+    font-size: 1.1rem;
+    width: 70%;
+  }
+  .search{
+    position:absolute !important;
+    right: 10px !important;
+  }
+  .result{
+       width: 80%;
+  }
+  .result>h2{
+    font-size: 1rem;
+    padding-right: 3px;
+  }
+  .file{
+    padding-left: 5px !important;
+  }
+}
+
+
+@media only screen and (max-width:300px){
+  .inputBox{
+    width: 70%;
+    position:relative;
+  }
+  .container >h1{
+   font-size: 1.1rem;
+  }
+  input{
+    font-size: 1rem;
+    width: 70%;
+  }
+  .search{
+    position:absolute !important;
+    right: 10px !important;
+  }
+  .result{
+    width: 80%;
+}
+.btn{
+  font-size: 10px !important;
+}
+.result>h2{
+  font-size: 1rem;
+  padding-right: 3px;
+}
+.file{
+  padding-left: 5px !important;
+}
+}
